@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/ajax/add_comment', function () {
+    return Request::all();
+})->name('comment-form');

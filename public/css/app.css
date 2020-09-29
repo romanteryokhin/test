@@ -1,0 +1,38 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  background-color: #eeeeee !important;
+  margin-bottom: 135px !important;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 135px;
+  background-color: #f9f9f9;
+}
+
+.footer-logo-block {
+  max-width: 120px !important;
+}
+
+.footer-logo-block .footer-logo {
+  width: 100%;
+}
+
+.heading {
+  background-color: #f9f9f9;
+  min-height: 225px;
+  padding: 40px 110px 25px;
+}
+
+.comment_form {
+  width: 50%;
+}
+
