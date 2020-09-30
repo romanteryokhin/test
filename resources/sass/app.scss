@@ -30,3 +30,69 @@ body {
 .comment_form {
     width: 50%;
 }
+#errorMess {
+    width: 50%;
+    padding: 5px;
+    margin: 20px 0;
+}
+.comment{
+    padding: 20px 0;
+    .first-row {
+        width: 30%;
+        display: flex;
+        justify-content: space-between;
+        .person_name {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .date_time {
+            font-size: 14px;
+        }
+    }
+    .comm_message {
+        padding-top: 10px;
+    }
+}
+#comment_message, #sendMail {
+    border: 2px solid #000;
+    background-color: rgb(238, 238, 238);
+}
+#sendMail {
+    float: right;
+}
+
+
+@media screen and (max-width:768px) {
+    .heading {
+        padding: 40px 0px 25px;
+        min-height: 195px;
+    }
+    .header-logo {
+        width: 20%;
+        img {
+            width: 100%;
+        }
+    }
+    .comment {
+        .first-row {
+            width: 100%;
+        }
+    }
+    .comment_form {
+        width: 100%;
+    }
+    .footer .row {
+        justify-content: space-between;
+        .col-6 {
+            .small {
+                font-size: 65%;
+            }
+        }
+    }
+    .footer {
+        .container {
+            padding: 5px !important;
+        }
+    }
+
+}

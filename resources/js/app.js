@@ -7,10 +7,10 @@ $(document).ready(function() {
         var message = $("#comment_message").val().trim();
 
          if (name == "") {
-            $("#errorMess").text("Введите имя");
+            $("#errorMess").addClass('alert-danger').text("Введите имя");
             return false;
         } else if (message == "") {
-            $("#errorMess").text("Введите сообщение");
+            $("#errorMess").addClass('alert-danger').text("Введите сообщение");
             return false;
         }
 
@@ -32,12 +32,17 @@ $(document).ready(function() {
                 $("#sendMail").prop('disabled', true);
             },
             success: function(data) {
-                if (!data) {
-                    alert('Error! Message not sent!')
-                } else {
+                //if (!data) {
+                //    alert('Error! Message not sent!')
+                //} else {
                     $("#comment_form").trigger('reset')
-                }
+                //}
                 $("#sendMail").prop('disabled', false);
+                $("#errorMess").addClass('alert-success').text("Спасибо за комментарий");
+
+                setTimeout(function(){
+                    window.location.href = '/';
+                }, 3000);
             }
         })
         .done(function() {
